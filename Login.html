@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CSVV Login Page</title>
+	<link rel="stylesheet" href="./CSS/bootstrap.min.css">
+	<link rel="stylesheet" href="./CSS/bootstrap-theme.css" media="screen">
+	<link rel="stylesheet" href="./CSS/style.css">
+    <script src="./JS/AdminGuardToggle.js"></script>
+</head>
+
+<body>
+	<!-- Fixed navbar -->
+	<div class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Button for smallest screens -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="index.html">
+					<img class="logo-dim" src="./Images/Common/logo.png" alt="logo"></a>
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav pull-right">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="Samples.html">Samples</a></li>
+					<li><a href="Support.php">Support</a></li>
+					<li class="active"><a href="Login.html">Login</a></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- /.navbar -->
+  
+  <header id="head" class="secondary">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<h1>Log In</h1>
+				</div>
+			</div>
+		</div>
+	</header>
+  
+  	<!-- /.Login multilevel form -->
+
+		<div class="form-box">
+		
+			<div class="button-box">
+				<div id="lbtn"></div>
+				<button type="button" class="toggle-btn" onclick="admin()">Admin</button>
+		    <button type="button" class="toggle-btn" onclick="guard()">Guard</button>
+		   
+		   </div> 	
+		        <form id="adm" class="input-pack" action="./PHP BackEnd/authenticate_admin.php" method ="post">
+		          <input type="text" class="input-field" placeholder="Admin User Id" name="AdminUserName" id="username" required minlength="3" maxlength="10">
+		          <input type="password" class="input-field" placeholder="Enter Password" name="AdminPassword" id="password" required minlength="3" maxlength="10" >
+		          <button type="submit" class="submit-btn" value="Login">Log in</button>
+		        </form>
+		
+		        <form id="gud" class="input-pack" action="./PHP BackEnd/authenticate_guard.php" method ="post">
+		          <input type="text" class="input-field" placeholder="Guard User Id" name="GuardUserName" id="username" required minlength="3" maxlength="10">
+		          <input type="password" class="input-field" placeholder="Enter Password" name="GuardPassword" id="password" required minlength="3" maxlength="10">
+		          <button type="submit" class="submit-btn" value="Login">Log in</button>
+		        </form> 
+		      </div>
+	
+              
+
+<footer id="footer">
+	<div class="footer2">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-6 panel">
+					<div class="panel-body">
+						<p class="simplenav">
+							<a href="index.html">Home</a>
+							<a href="about.html">About</a>
+							<a href="Samples.html">Samples</a>
+							<a href="Support.php">Support</a>
+							<a href="Login.html">Login</a>
+						</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 panel">
+					<div class="panel-body">
+						<p class="text-right">
+							Copyright &copy; 2022. Stundent Project by <a href="https://seu.edu.sa/" rel="develop">Saudi Electronic University</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+  </body>
+</html>
